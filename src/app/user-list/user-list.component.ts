@@ -9,31 +9,36 @@ import {IUser} from '../user/IUser';
   styleUrls: ['./user-list.component.css']
 })
 export class UserListComponent implements OnInit {
+  showImg = true;
   keyword;
   count;
   users: IUser[] = [{
     name: 'Dieu',
     address: 'ND',
     email: 'dieu@gmail.com',
-    phone: 936278689
+    phone: 936278689,
+    image: 'assets/images/human.png'
   },
     {
       name: 'An',
       address: 'HN',
       email: 'an@gmail.com',
-      phone: 123456789
+      phone: 123456789,
+      image: 'assets/images/human.png'
     },
     {
       name: 'Long',
       address: 'BG',
       email: 'long@gmail.com',
-      phone: 123456789
+      phone: 123456789,
+      image: 'assets/images/human.png'
     },
     {
       name: 'Hoang',
       address: 'TH',
       email: 'hoang@gmail.com',
-      phone: 123456789
+      phone: 123456789,
+      image: 'assets/images/human.png'
     }
   ];
   usersFilter: IUser[] = [];
@@ -54,6 +59,9 @@ export class UserListComponent implements OnInit {
       this.usersFilter = this.users;
   }
 
+  showImage(){
+    this.showImg = !this.showImg;
+  }
 
 
 }
